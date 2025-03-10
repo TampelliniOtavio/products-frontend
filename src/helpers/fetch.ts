@@ -50,7 +50,6 @@ type RequestConfig = Omit<RequestInit, 'body' | 'method'>
 function fetchWithBody(method: 'POST' | 'PUT') {
   return <T extends object>(url: string, body?: object, init?: RequestConfig) => {
     const bodyParsed = body ? JSON.stringify(body) : undefined
-    console.log(bodyParsed)
     return baseFetch<T>(url, { ...init, method, body: bodyParsed, headers: {
       ...init?.headers ?? {},
       "content-type": "application/json"
