@@ -1,1 +1,57 @@
 @import './base.css';
+
+.error-message {
+  @apply text-red-400;
+}
+
+.title {
+  @apply text-center mb-3 text-xl font-bold;
+}
+
+button, .btn {
+  @apply p-3 rounded-lg cursor-pointer;
+}
+
+button.btn-danger, .btn.btn-danger {
+  @apply bg-red-200;
+}
+
+.btn-group {
+  @apply flex gap-2;
+}
+
+.btn-group button, .btn-group.btn {
+  @apply flex-grow;
+}
+
+button.btn-info, .btn.btn-info {
+  @apply bg-blue-200;
+}
+
+button.btn-success, .btn.btn-success {
+  @apply bg-green-200;
+}
+
+.form-control {
+  @apply flex flex-col;
+}
+
+.form-control label, .form-control input, .form-control textarea, .form-control select {
+  @apply w-full pl-1;
+}
+
+.form-control input, .form-control textarea, .form-control select {
+  @apply bg-white rounded px-3 py-2 border border-slate-200;
+}
+
+table.table-product {
+  @apply bg-white border-separate border-spacing-2;
+}
+
+.table-product th {
+  @apply py-4;
+}
+
+form.form-product {
+  @apply w-full md:w-1/2 bg-white p-8 grid gap-4;
+}
